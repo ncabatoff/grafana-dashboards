@@ -1,0 +1,3 @@
+#!/bin/sh
+
+jq -r 'del(.__inputs, .__requires) | {dashboard: ., overwrite: true}'
