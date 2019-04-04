@@ -6,11 +6,11 @@ jsonnetfile.json:
 vendor/grafonnet-lib: jsonnetfile.json
 	jb install github.com/grafana/grafonnet-lib
 
-%.json: %.jsonnet vendor/grafonnet-lib
+dashboards/%.json: %.jsonnet vendor/grafonnet-lib
 	jsonnet -J vendor/grafonnet-lib/grafonnet $< -o $@
 
-grafana: $(DASHBOARDS)
-	for i in $(DASHBOARDS); do ../bin/dashToCurl < $$i | curl -i -u admin:admin -H "Content-Type: application/json" -X POST http://grafana.service.dc1.consul:3000/api/dashboards/db -d @- ; done
+#grafana: $(DASHBOARDS)
+#	for i in $(DASHBOARDS); do ../bin/dashToCurl < $$i | curl -i -u admin:admin -H "Content-Type: application/json" -X POST http://grafana.service.dc1.consul:3000/api/dashboards/db -d @- ; done
 
 clean:
 	rm $(DASHBOARDS)
