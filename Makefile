@@ -1,4 +1,4 @@
-DASHBOARDS=consul-server.json nomad-server.json nomad-client.json nomad-job.json prom-targets.json
+DASHBOARDS=consul-server.json nomad-server.json nomad-client.json nomad-job.json prom-targets.json node_exporter.json
 GRAFANA=http://grafana.service.dc1.consul:3000
 
 jsonnetfile.json:
