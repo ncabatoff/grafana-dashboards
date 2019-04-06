@@ -233,25 +233,18 @@
                "refId": "A"
             },
             {
-               "expr": "node_memory_Buffers_bytes{instance=~\"($instance).*\"}",
+               "expr": "node_memory_Buffers_bytes{instance=~\"($instance).*\"}\n                    + node_memory_Cached_bytes{instance=~\"($instance).*\"}",
                "format": "time_series",
                "intervalFactor": 2,
-               "legendFormat": "Buffers",
+               "legendFormat": "Buffers+Cached",
                "refId": "B"
-            },
-            {
-               "expr": "node_memory_Cached_bytes{instance=~\"($instance).*\"}",
-               "format": "time_series",
-               "intervalFactor": 2,
-               "legendFormat": "Cached",
-               "refId": "C"
             },
             {
                "expr": "node_memory_MemFree_bytes{instance=~\"($instance).*\"}",
                "format": "time_series",
                "intervalFactor": 2,
                "legendFormat": "Free",
-               "refId": "D"
+               "refId": "C"
             }
          ],
          "thresholds": [ ],

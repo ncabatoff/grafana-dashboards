@@ -82,9 +82,8 @@ grafana.dashboard.new(
          - node_memory_Buffers_bytes{instance=~"($instance).*"}
          - node_memory_Cached_bytes{instance=~"($instance).*"}', legendFormat="Used")
     ).addTarget(
-        prom.target('node_memory_Buffers_bytes{instance=~"($instance).*"}', legendFormat="Buffers")
-    ).addTarget(
-        prom.target('node_memory_Cached_bytes{instance=~"($instance).*"}', legendFormat="Cached")
+        prom.target('node_memory_Buffers_bytes{instance=~"($instance).*"}
+                    + node_memory_Cached_bytes{instance=~"($instance).*"}', legendFormat="Buffers+Cached")
     ).addTarget(
         prom.target('node_memory_MemFree_bytes{instance=~"($instance).*"}', legendFormat="Free")
     ),
