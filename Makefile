@@ -1,4 +1,5 @@
-DASHBOARDS=consul-server.json nomad-server.json nomad-client.json nomad-job.json
+DASHBOARDS=consul-server.json nomad-server.json nomad-client.json nomad-job.json prom-targets.json
+GRAFANA=http://grafana.service.dc1.consul:3000
 
 jsonnetfile.json:
 	jb init
@@ -9,8 +10,8 @@ vendor/grafonnet-lib: jsonnetfile.json
 dashboards/%.json: %.jsonnet vendor/grafonnet-lib
 	jsonnet -J vendor/grafonnet-lib/grafonnet $< -o $@
 
-#grafana: $(DASHBOARDS)
-#	for i in $(DASHBOARDS); do ../bin/dashToCurl < $$i | curl -i -u admin:admin -H "Content-Type: application/json" -X POST http://grafana.service.dc1.consul:3000/api/dashboards/db -d @- ; done
+grafana: $(DASHBOARDS)
+	for i in $(DASHBOARDS); do bin/dashToCurl < $$i | curl -i -u admin:admin -H "Content-Type: application/json" -X POST $$GRAFANA/api/dashboards/db -d @- ; done
 
 clean:
 	rm $(DASHBOARDS)
