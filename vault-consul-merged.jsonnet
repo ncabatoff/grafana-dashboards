@@ -46,7 +46,7 @@ grafana.dashboard.new(
         datasource='$ds',
         format="percentunit",
     ).addTarget(
-        prom.target('avg without (cpu) (rate(node_cpu_seconds_total{mode!="idle"}[5m]))', legendFormat="{{mode}}")
+        prom.target('avg without (cpu) (rate(node_cpu_seconds_total{mode!="idle"}[$interval]))', legendFormat="{{mode}}")
     ),
     gridPos={ x: 0, y: 1, w: 6, h: 5}
 )
@@ -62,7 +62,7 @@ grafana.dashboard.new(
         datasource='$ds',
         format="percentunit",
     ).addTarget(
-        prom.target('rate(node_disk_io_time_seconds_total{device!~"^(md[0-9]+$|dm-)"}[5m])', legendFormat="{{device}}")
+        prom.target('rate(node_disk_io_time_seconds_total{device!~"^(md[0-9]+$|dm-)"}[$interval])', legendFormat="{{device}}")
     ),
     gridPos={ x: 6, y: 1, w: 6, h: 5}
 )
