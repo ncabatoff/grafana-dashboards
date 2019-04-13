@@ -53,7 +53,7 @@ grafana.dashboard.new(
         legend_alignAsTable=true,
     ).addTarget(
         prom.target('sum by (groupname) (
-            irate(namedprocess_namegroup_cpu_user_seconds_total{groupname=~"$group", instance=~"$instance"}[1m])
+            irate(namedprocess_namegroup_cpu_seconds_total{mode="user", groupname=~"$group", instance=~"$instance"}[1m])
           )',
           legendFormat="{{groupname}}")
     ),
@@ -75,7 +75,7 @@ grafana.dashboard.new(
         legend_alignAsTable=true,
     ).addTarget(
         prom.target('sum by (groupname) (
-            irate(namedprocess_namegroup_cpu_system_seconds_total{groupname=~"$group", instance=~"$instance"}[1m])
+            irate(namedprocess_namegroup_cpu_seconds_total{mode="system", groupname=~"$group", instance=~"$instance"}[1m])
           )',
           legendFormat="{{groupname}}")
     ),

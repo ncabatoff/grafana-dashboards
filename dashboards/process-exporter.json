@@ -367,7 +367,7 @@
          "steppedLine": false,
          "targets": [
             {
-               "expr": "sum by (groupname) (\n            irate(namedprocess_namegroup_cpu_system_seconds_total{groupname=~\"$group\", instance=~\"$instance\"}[1m])\n            + irate(namedprocess_namegroup_cpu_user_seconds_total{groupname=~\"$group\", instance=~\"$instance\"}[1m])\n          )",
+               "expr": "sum by (groupname) (\n            irate(namedprocess_namegroup_cpu_seconds_total{groupname=~\"$group\", instance=~\"$instance\"}[1m])\n          )",
                "format": "time_series",
                "intervalFactor": 2,
                "legendFormat": "{{groupname}}",
