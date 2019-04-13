@@ -40,6 +40,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'process_exporter up',
+        datasource='$ds',
         span=6,
         fill=0,
         min=0,
@@ -48,7 +49,6 @@ grafana.dashboard.new(
         legend_show=false,
         legend_hideEmpty=true,
         legend_hideZero=true,
-        datasource='$ds',
     ).addTarget(
         prom.target('up{job=~"process-exporter.*", instance=~"$instance"}')
     ),
@@ -57,13 +57,13 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'scrape duration',
+        datasource='$ds',
         span=6,
         fill=0,
         min=0,
         legend_show=false,
         legend_hideEmpty=true,
         legend_hideZero=true,
-        datasource='$ds',
         format="s",
     ).addTarget(
         prom.target('scrape_duration_seconds{job=~"process-exporter.*", instance=~"$instance"}')
@@ -73,6 +73,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'process scrape errors',
+        datasource='$ds',
         span=6,
         fill=0,
         min=0,
@@ -80,7 +81,6 @@ grafana.dashboard.new(
         legend_show=false,
         legend_hideEmpty=true,
         legend_hideZero=true,
-        datasource='$ds',
     ).addTarget(
         prom.target('rate(namedprocess_scrape_errors{instance=~"$instance"}[1m])')
     ).addTarget(
@@ -98,6 +98,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'CPU',
+        datasource='$ds',
         fill=true,
         stack=true,
         min=0,
@@ -122,6 +123,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Resident memory',
+        datasource='$ds',
         fill=true,
         stack=true,
         min=0,
@@ -147,6 +149,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Disk I/O',
+        datasource='$ds',
         fill=true,
         stack=true,
         min=0,

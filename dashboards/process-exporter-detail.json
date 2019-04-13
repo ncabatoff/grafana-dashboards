@@ -35,7 +35,7 @@
          "bars": false,
          "dashLength": 10,
          "dashes": false,
-         "datasource": null,
+         "datasource": "$ds",
          "fill": 1,
          "gridPos": {
             "h": 12,
@@ -120,7 +120,7 @@
          "bars": false,
          "dashLength": 10,
          "dashes": false,
-         "datasource": null,
+         "datasource": "$ds",
          "fill": 1,
          "gridPos": {
             "h": 12,
@@ -205,7 +205,7 @@
          "bars": false,
          "dashLength": 10,
          "dashes": false,
-         "datasource": null,
+         "datasource": "$ds",
          "fill": 1,
          "gridPos": {
             "h": 12,
@@ -309,7 +309,7 @@
          "bars": false,
          "dashLength": 10,
          "dashes": false,
-         "datasource": null,
+         "datasource": "$ds",
          "fill": 1,
          "gridPos": {
             "h": 12,
@@ -394,7 +394,7 @@
          "bars": false,
          "dashLength": 10,
          "dashes": false,
-         "datasource": null,
+         "datasource": "$ds",
          "fill": 1,
          "gridPos": {
             "h": 12,
@@ -479,7 +479,7 @@
          "bars": false,
          "dashLength": 10,
          "dashes": false,
-         "datasource": null,
+         "datasource": "$ds",
          "description": "These represent changes to the oldest start time in the group.\n        When there is a single process in the group this must mean it restarted.\n        With multiple processes it's more ambiguous: it could just mean that the\n        oldest one exited and no new process has started.",
          "fill": true,
          "gridPos": {
@@ -584,7 +584,7 @@
          "bars": false,
          "dashLength": 10,
          "dashes": false,
-         "datasource": null,
+         "datasource": "$ds",
          "fill": 1,
          "gridPos": {
             "h": 12,
@@ -669,7 +669,7 @@
          "bars": false,
          "dashLength": 10,
          "dashes": false,
-         "datasource": null,
+         "datasource": "$ds",
          "fill": 1,
          "gridPos": {
             "h": 12,
@@ -754,7 +754,7 @@
          "bars": false,
          "dashLength": 10,
          "dashes": false,
-         "datasource": null,
+         "datasource": "$ds",
          "fill": 1,
          "gridPos": {
             "h": 12,

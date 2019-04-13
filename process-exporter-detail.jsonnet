@@ -40,6 +40,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'CPU User',
+        datasource='$ds',
         min=0,
         legend_show=true,
         legend_hideEmpty=true,
@@ -61,6 +62,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'CPU System',
+        datasource='$ds',
         min=0,
         legend_show=true,
         legend_hideEmpty=true,
@@ -82,6 +84,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Context switches',
+        datasource='$ds',
         min=0,
         legend_show=true,
         legend_hideEmpty=true,
@@ -109,6 +112,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Num processes',
+        datasource='$ds',
         min=0,
         legend_show=true,
         legend_hideEmpty=true,
@@ -131,6 +135,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Num threads',
+        datasource='$ds',
         min=0,
         legend_show=true,
         legend_hideEmpty=true,
@@ -153,6 +158,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Exits/Restarts',
+        datasource='$ds',
         description="These represent changes to the oldest start time in the group.
         When there is a single process in the group this must mean it restarted.
         With multiple processes it's more ambiguous: it could just mean that the
@@ -187,6 +193,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Open filedescs',
+        datasource='$ds',
         min=0,
         legend_show=true,
         legend_hideEmpty=true,
@@ -209,6 +216,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Worst filedesc ratio',
+        datasource='$ds',
         min=0,
         legend_show=true,
         legend_hideEmpty=true,
@@ -231,6 +239,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Wchan threads',
+        datasource='$ds',
         min=0,
         legend_show=true,
         legend_hideEmpty=true,

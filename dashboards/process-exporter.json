@@ -330,7 +330,7 @@
          "bars": false,
          "dashLength": 10,
          "dashes": false,
-         "datasource": null,
+         "datasource": "$ds",
          "fill": true,
          "gridPos": {
             "h": 15,
@@ -415,7 +415,7 @@
          "bars": false,
          "dashLength": 10,
          "dashes": false,
-         "datasource": null,
+         "datasource": "$ds",
          "fill": true,
          "gridPos": {
             "h": 15,
@@ -500,7 +500,7 @@
          "bars": false,
          "dashLength": 10,
          "dashes": false,
-         "datasource": null,
+         "datasource": "$ds",
          "fill": true,
          "gridPos": {
             "h": 15,

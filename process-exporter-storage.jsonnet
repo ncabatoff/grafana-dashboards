@@ -40,6 +40,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Resident memory',
+        datasource='$ds',
         fill=true,
         stack=true,
         min=0,
@@ -64,6 +65,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Virtual memory',
+        datasource='$ds',
         fill=true,
         stack=true,
         min=0,
@@ -88,6 +90,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Swapped memory',
+        datasource='$ds',
         fill=true,
         stack=true,
         min=0,
@@ -118,6 +121,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Disk Read',
+        datasource='$ds',
         fill=true,
         stack=true,
         min=0,
@@ -143,6 +147,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Disk Write',
+        datasource='$ds',
         fill=true,
         stack=true,
         min=0,
@@ -168,6 +173,7 @@ grafana.dashboard.new(
 .addPanel(
     graphPanel.new(
         'Major page faults',
+        datasource='$ds',
         fill=true,
         stack=true,
         min=0,
